@@ -350,7 +350,7 @@ h3 {
         flex-direction: row;
         margin: 0;
         gap: 4.2em;
-    
+        padding: 0;
     }
 
     nav ul li {
@@ -360,6 +360,12 @@ h3 {
     nav ul li a {
         font-size: 3.2rem;
     }
+
+    .header .wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
 
     .hide-desktop {
         display: none;
