@@ -1,0 +1,534 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 62.5%;
+    scroll-behavior: smooth
+}
+
+:root {
+    --background-color: #1D1D1D;
+    --watermark-color: #252525;
+    --secondary-color: #7C7777;
+    --greytext-color: #B9B9B9;
+    --text-color: #ffffff;
+}
+
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.logo a {
+    font-size: 3.2rem;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.logo:hover{
+    transform: scale(120%);
+}
+
+nav {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--background-color);
+    top: 0;
+    right: -100%;
+}
+
+.open {
+    right: 0%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    list-style-type: none;
+    color: var(--text-color);
+    font-size: 4.2rem;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 250ms ease-in;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+
+nav ul li {
+    list-style-type: none;
+    margin-top: 7em;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: end;
+    padding: 1.6em;
+    margin-top: 7em;
+}
+
+.close-btn {
+    width: 4em;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    padding: 1.6em;
+    padding-top: 3.2em;
+}
+
+.menu-btn {
+    width: 4.2em;
+    cursor: pointer;
+}
+
+.header .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1.6em;
+    align-items: center;
+    border-bottom: white solid 2px;
+    padding-bottom: 1.6em;
+    padding-top: 1.6em;
+}
+
+.wrapper {
+    margin: 1.6em;
+}
+
+/* HERO SECTION */
+
+.hero {
+    margin-top: 10em;
+    margin-bottom: 40em;
+}
+
+.caption span {
+    color: var(--secondary-color);
+}
+
+.caption p {
+    font-size: 1.8rem;
+    color: var(--greytext-color);
+}
+
+h1 {
+    font-size: 4.2rem;
+}
+
+.proyectos-cta {
+    display: flex;
+    flex-direction: row;
+    gap: 1.4em;
+    align-items: baseline;
+    color: white;
+    margin-top: 4em;
+}
+
+
+
+.proyectos-cta p {
+    color: white;
+    font-size: 3rem;
+}
+
+.proyectos-cta svg {
+    width: 2.1em;
+}
+
+/* PROYECTOS */
+
+#proyectos h2, #sobremi h2, #contacto h2 {
+    font-size: 4.6em;
+    font-weight: 300;
+    border-bottom: white solid 2px;
+    padding-bottom: .5em;
+    margin-bottom: 2.2em;
+}
+
+#proyectos img {
+    width: 100%;
+    border-radius: 2.4em;
+    object-fit: cover;
+}
+
+h3 {
+    font-size: 3.8rem;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+#proyectos p {
+    font-size: 1.8rem;
+    color: var(--greytext-color);
+    line-height: 2em;
+}
+
+.proyecto2 .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.cta1 {
+    color: var(--background-color);
+    background-color: var(--text-color);
+    font-size: 2.4rem;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+    text-decoration: none;
+    margin-top: 3.2em;
+}
+
+.cta1:hover {
+    background-color: #ACACAC;
+}
+
+.cta2 {
+    color: var(--greytext-color);
+    border: 2px solid #ACACAC;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2em;
+    padding: 24px;
+    text-decoration: none;
+    margin-top: 1.2em;
+}
+
+.cta2:hover {
+    background-color: var(--watermark-color);
+}
+
+.cta2 span {
+    font-size: 2.4rem;
+}
+
+.proyecto1 {
+    margin-bottom: 14em;
+}
+
+/* SOBRE MI */
+
+#sobremi {
+    margin-top: 20em;
+}
+
+#sobremi img {
+    width: 100%;
+    border-radius: 1.2em;
+}
+
+#sobremi p {
+    font-size: 2.8rem;
+    line-height: 150%;
+}
+
+#sobremi .habilidades-titulo {
+    font-size: 4.2rem;
+    border-bottom: white solid 2px;
+    padding-bottom: .2em;
+    margin-top: 3em;
+}
+
+#sobremi .herramientas-titulo {
+    font-size: 4.2rem;
+    border-bottom: white solid 2px;
+    padding-bottom: .2em;
+    margin-top: 3em;
+}
+
+.herramientas-lista {
+    margin: 0;
+    padding: 0;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 2.4em;
+    list-style-type: none;
+}
+
+.herramientas-lista li {
+    font-size: 2.8rem;
+}
+
+
+
+/* CONTACTO FOOTER */
+
+
+#contacto {
+    margin-top: 20em;
+}
+
+.contact {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4em ;
+}
+
+.contact li {
+    display: flex;
+    flex-direction: row;
+    gap: .8em;
+    font-size: 2.6rem;
+    align-items: baseline;
+    line-height: 0;
+} 
+
+.contact svg {
+    width: 2em;
+}
+
+.arrow {
+    width: 10em;
+    margin-top: 10em;
+}
+
+#contacto h2 {
+    font-size: 3.6rem;
+    line-height: 150%;
+    margin-bottom: 2em;
+}
+
+.copyright {
+    font-size: 2.6rem;
+    color: var(--secondary-color);
+}
+
+
+
+/* DESKTOP MEDIA QUERIES */
+
+@media screen and (min-width:900px) {
+    
+    .wrapper, .header {
+        max-width: 1400px;
+        margin: auto;
+        padding: 2em;
+    }
+
+    #proyectos h2, #sobremi h2, #contacto h2 {
+        font-size: 7.2em;
+    }
+
+ 
+
+
+    /* HEADER & NAVBAR */
+
+    nav {
+        position: unset;
+        width: auto;
+        height: auto;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: row;
+        margin: 0;
+        gap: 4.2em;
+    
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    nav ul li a {
+        font-size: 3.2rem;
+    }
+
+    .hide-desktop {
+        display: none;
+    }
+
+
+
+    /* HERO SECTION */
+
+
+    .hero .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 8.1rem;
+        text-align: center;
+    }
+
+    .caption {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .caption p {
+        font-size: 3.2rem;
+        text-align: center;
+        max-width: 1000px;
+        justify-self: center;
+        margin: 0;
+    }
+
+    .proyectos-cta {
+        align-items: center;
+    }
+
+    .proyectos-cta:hover {
+        transform: scale(120%);
+    }
+
+    .proyectos-cta p {
+        font-size: 4rem;
+    }
+
+    .proyectos-cta svg {
+        width: 2.5em;
+    }
+
+
+    /* PROYECTOS */
+
+    h3 {
+        font-size: 6.2rem;
+        margin-top: 0;
+    }
+
+   #proyectos img {
+        max-width: 75em;
+        width: 45%;
+   }
+
+    .proyecto1, .proyecto2 {
+        display: flex;
+        gap: 10em;
+        justify-content: space-between;
+    }
+
+    .proyecto1 .cta1 {
+        width: 60%;
+    }
+
+    .proyecto2 {
+        flex-direction: row-reverse;
+        margin-top: 30em;
+    }
+
+    .proyecto1 .content, .proyecto2 .content {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+
+    #proyectos p {
+        font-size: 2.8rem;
+    }
+
+    .proyecto2 .buttons {
+        flex-direction: row;
+    }
+
+    .proyecto2 .cta1, .proyecto2 .cta2 {
+        width: 50%;
+        margin: 0;
+    }
+
+
+    /* SOBRE MI */
+
+    .firstrow {
+        display: flex;
+        gap: 2em;
+        align-items:flex-start;
+        justify-content: space-between;
+    }
+
+    #sobremi p {
+        font-size: 4.2rem;
+    }
+
+    #sobremi .firstrow p {
+        margin: 0;
+        max-width: 55%;
+    }
+
+    #sobremi .secondrow p {
+        width: auto;
+        margin-top: 3.2em;
+    }
+
+    .firstrow img {
+        max-width: 50em;
+    }
+
+
+    .skills {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .habilidades {
+        width: 50%;
+    }
+
+    /* CONTACTO */
+
+    #contacto h2  {
+        margin: 0;
+    }
+
+    .contact {
+        margin-top: 9em;
+    }
+
+    .contact p {
+        font-size: 4.2rem;
+    }
+
+    .arrow {
+        width: 20em;
+        margin-top: 15em;
+        margin-bottom: 5em;
+    }
+    
+
+    .copyright {
+        margin-top: 2em;
+        margin-bottom: 2em
+    }
+
+
+
+
+
+
+
+}
