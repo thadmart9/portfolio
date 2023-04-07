@@ -12,6 +12,12 @@ html {
     --text-color: #ffffff;
 }
 
+/* PROYECTO 3 MARGEN, HAY QUE PONERLO EN SU CORRECTO SITIO EN UN FUTURO */
+
+#proyecto3 {
+    margin-bottom: 30em;
+}
+
 
 body {
     background-color: var(--background-color);
