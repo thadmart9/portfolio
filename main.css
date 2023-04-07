@@ -15,7 +15,7 @@ html {
 /* PROYECTO 3 MARGEN, HAY QUE PONERLO EN SU CORRECTO SITIO EN UN FUTURO */
 
 #proyecto3 {
-    margin-bottom: 30em;
+    margin-bottom: 14em;
 }
 
 
@@ -329,6 +329,12 @@ h3 {
 /* DESKTOP MEDIA QUERIES */
 
 @media screen and (min-width:900px) {
+    
+    /* Proyecto 3 Margin */
+    
+    #proyecto3 {
+        margin-bottom: 30em;
+    }
     
     .wrapper, .header {
         max-width: 1400px;
